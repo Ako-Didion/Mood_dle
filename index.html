@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood_dle - Guess the Mood!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎭 Mood_dle</h1>
+            <p class="subtitle">Guess the mood in 6 tries!</p>
+        </header>
+
+        <div class="game-board" id="gameBoard">
+            <!-- Game grid will be generated here -->
+        </div>
+
+        <div class="message" id="message"></div>
+
+        <div class="keyboard" id="keyboard">
+            <!-- Keyboard will be generated here -->
+        </div>
+
+        <div class="controls">
+            <button id="newGameBtn" class="btn">New Game</button>
+            <button id="howToPlayBtn" class="btn btn-secondary">How to Play</button>
+        </div>
+    </div>
+
+    <!-- How to Play Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>How to Play</h2>
+            <p>Guess the mood in 6 tries.</p>
+            <ul>
+                <li>Each guess must be a valid 5-letter mood or emotion word.</li>
+                <li>After each guess, the color of the tiles will change to show how close your guess was.</li>
+            </ul>
+            <div class="examples">
+                <h3>Examples:</h3>
+                <div class="example-row">
+                    <div class="tile correct">H</div>
+                    <div class="tile">A</div>
+                    <div class="tile">P</div>
+                    <div class="tile">P</div>
+                    <div class="tile">Y</div>
+                </div>
+                <p><strong>H</strong> is in the word and in the correct spot.</p>
+                
+                <div class="example-row">
+                    <div class="tile">A</div>
+                    <div class="tile present">N</div>
+                    <div class="tile">G</div>
+                    <div class="tile">R</div>
+                    <div class="tile">Y</div>
+                </div>
+                <p><strong>N</strong> is in the word but in the wrong spot.</p>
+                
+                <div class="example-row">
+                    <div class="tile">S</div>
+                    <div class="tile">A</div>
+                    <div class="tile absent">D</div>
+                    <div class="tile">L</div>
+                    <div class="tile">Y</div>
+                </div>
+                <p><strong>D</strong> is not in the word in any spot.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
