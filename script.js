@@ -4,7 +4,7 @@ const MOODS = [
     'WEARY', 'GIDDY', 'TENSE', 'PERKY', 'GLUM',
     'LIVID', 'MERRY', 'SOBER', 'JUMPY', 'CROSS',
     'PEPPY', 'LOOPY', 'WACKY', 'ZESTY', 'POUTY',
-    'MUSHY', 'PANICKY', 'SUNNY', 'GRUMPY', 'FEISTY'
+    'MUSHY', 'PANIC', 'SUNNY', 'GRUMP', 'FEIST'
 ];
 
 // Game state
@@ -39,10 +39,10 @@ function initGame() {
     // Create keyboard
     createKeyboard();
     
+    // Remove old keyboard event listener if exists
+    document.removeEventListener('keydown', handleKeyPress);
     // Add keyboard event listeners
     document.addEventListener('keydown', handleKeyPress);
-    
-    console.log('Target word:', targetWord); // For testing
 }
 
 function createBoard() {
