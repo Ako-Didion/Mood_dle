@@ -1,0 +1,4 @@
+/Mes_Cours_pdf/*/*
+.env
+bot.py
+deja_envoyes.json
